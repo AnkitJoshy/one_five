@@ -5,6 +5,9 @@ const PORT = process.env.PORT || 3000
 app.listen(PORT, () => console.log(`server ${PORT}`));
 var bodyParser = require('body-parser');
 
+const path = require(“path”);
+app.use(express.static(path.join(__dirname, “client / build”)))
+
 
 app.use(bodyParser.urlencoded({ extended: false }))
 
