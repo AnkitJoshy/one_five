@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate(val) {
+            v1 = document.getElementById("fname");
+            v2 = document.getElementById("lname");
+            v3 = document.getElementById("email");
+            v4 = document.getElementById("mob");
+            v5 = document.getElementById("job");
+            v6 = document.getElementById("ans");
+
+            flag1 = true;
+            flag2 = true;
+            flag3 = true;
+            flag4 = true;
+            flag5 = true;
+            flag6 = true;
+
+            if (val >= 1 || val == 0) {
+                if (v1.value == "") {
+                    v1.style.borderColor = "red";
+                    flag1 = false;
+                } else {
+                    v1.style.borderColor = "green";
+                    flag1 = true;
+                }
+            }
+
+            if (val >= 2 || val == 0) {
+                if (v2.value == "") {
+                    v2.style.borderColor = "red";
+                    flag2 = false;
+                } else {
+                    v2.style.borderColor = "green";
+                    flag2 = true;
+                }
+            }
+            if (val >= 3 || val == 0) {
+                if (v3.value == "") {
+                    v3.style.borderColor = "red";
+                    flag3 = false;
+                } else {
+                    v3.style.borderColor = "green";
+                    flag3 = true;
+                }
+            }
+            if (val >= 4 || val == 0) {
+                if (v4.value == "") {
+                    v4.style.borderColor = "red";
+                    flag4 = false;
+                } else {
+                    v4.style.borderColor = "green";
+                    flag4 = true;
+                }
+            }
+            if (val >= 5 || val == 0) {
+                if (v5.value == "") {
+                    v5.style.borderColor = "red";
+                    flag5 = false;
+                } else {
+                    v5.style.borderColor = "green";
+                    flag5 = true;
+                }
+            }
+            if (val >= 6 || val == 0) {
+                if (v6.value == "") {
+                    v6.style.borderColor = "red";
+                    flag6 = false;
+                } else {
+                    v6.style.borderColor = "green";
+                    flag6 = true;
+                }
+            }
+
+            flag = flag1 && flag2 && flag3 && flag4 && flag5 && flag6;
+
+            return flag;
+        }
+    </script>
+    <style>
+        body {
+            color: #000;
+            overflow-x: hidden;
+            height: 100%;
+            /* background-image: url("https://i.imgur.com/GMmCQHC.png"); */
+            background-repeat: no-repeat;
+            background-size: 100% 100%
+        }
+        
+        .card {
+            padding: 30px 40px;
+            margin-top: 60px;
+            margin-bottom: 60px;
+            border: none !important;
+            box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2)
+        }
+        
+        .blue-text {
+            color: #00BCD4
+        }
+        
+        .form-control-label {
+            margin-bottom: 0
+        }
+        
+        input,
+        textarea,
+        button {
+            padding: 8px 15px;
+            border-radius: 5px !important;
+            margin: 5px 0px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            font-size: 18px !important;
+            font-weight: 300
+        }
+        
+        input:focus,
+        textarea:focus {
+            -moz-box-shadow: none !important;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+            border: 1px solid #00BCD4;
+            outline-width: 0;
+            font-weight: 400
+        }
+        
+        .btn-block {
+            text-transform: uppercase;
+            font-size: 15px !important;
+            font-weight: 400;
+            height: 43px;
+            cursor: pointer
+        }
+        
+        .btn-block:hover {
+            color: #fff !important
+        }
+        
+        button:focus {
+            -moz-box-shadow: none !important;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+            outline-width: 0
+        }
+        
+        .page-section.vertical-alignment--middle:not(.content-collection):not(.gallery-section):not(.user-items-list-section):not(.editmode-changing-rowcount) {
+            align-items: center;
+        }
+        
+        .page-section.section-height--small:not(.content-collection):not(.gallery-section):not(.user-items-list-section) {
+            min-height: 33vh;
+        }
+        
+        .page-section {
+            background-color: #00a06e !important;
+        }
+        
+        .page-section {
+            color: #fff;
+        }
+        
+        .page-section {
+            background-color: #0064b4;
+        }
+        
+        .page-section {
+            position: relative;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+        }
+        
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        main,
+        nav,
+        section,
+        summary {
+            display: block;
+        }
+        
+        user agent stylesheet section {
+            display: block;
+        }
+        
+        @media screen and (min-width: 1833.8px) .site-wrapper,
+        .sqs-catalog-item-list {
+            font-size: calc(.9 * 1rem);
+        }
+        
+        .site-wrapper,
+        .sqs-catalog-item-list {
+            font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            line-height: 1.8em;
+            font-family: aktiv-grotesk;
+            font-weight: 400;
+            font-style: normal;
+            letter-spacing: 0em;
+            text-transform: none;
+            line-height: 1.4em;
+            font-size: 1rem;
+            line-height: 1.4;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid px-1 py-5 mx-auto">
+        <div class="row d-flex justify-content-center">
+            <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+
+                <div class="card">
+
+                    <form class="form-card" action="/form" method="post">
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">First name<span class="text-danger"> *</span></label> <input type="text" id="fname" name="fname" placeholder="Enter your first name" onblur="validate(1)"> </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Last name<span class="text-danger"> *</span></label> <input type="text" id="lname" name="lname" placeholder="Enter your last name" onblur="validate(2)"> </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Business email<span class="text-danger"> *</span></label> <input type="text" id="email" name="email" placeholder="" onblur="validate(3)"> </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Phone number<span class="text-danger"> *</span></label> <input type="text" id="mob" name="mob" placeholder="" onblur="validate(4)"> </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Job title<span class="text-danger"> *</span></label> <input type="text" id="job" name="job" placeholder="" onblur="validate(5)"> </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-12 flex-column d-flex"> <label class="form-control-label px-3">Your area of expertise<span class="text-danger"> *</span></label> <input type="text" id="ans" name="area_of_expertise" placeholder="" onblur="validate(6)"> </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-12 flex-column d-flex"> <label class="form-control-label px-3">Who is your current employer and what's your current job title? <span class="text-danger"> *</span></label> <input type="text" id="ans" name="current_employer" placeholder="" onblur="validate(6)">                                </div>
+                        </div>
+                        <div class="row justify-content-end">
+                            <div class="form-group col-sm-6"> <button type="submit" class="btn-block btn-primary">SUBMIT</button> </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section data-test="page-section" data-section-theme="" class="page-section
+    
+      layout-engine-section
+    
+    background-width--full-bleed
+    
+      section-height--small
+    
+    
+      content-width--wide
+    
+    horizontal-alignment--center
+    vertical-alignment--middle
+    
+      
+    
+    
+    " data-section-id="606d8ec034dc8f1143391c63" data-controller="SectionWrapperController" data-current-styles="{
+&quot;imageOverlayOpacity&quot;: 0.15,
+&quot;backgroundWidth&quot;: &quot;background-width--full-bleed&quot;,
+&quot;sectionHeight&quot;: &quot;section-height--small&quot;,
+&quot;customSectionHeight&quot;: 10,
+&quot;horizontalAlignment&quot;: &quot;horizontal-alignment--center&quot;,
+&quot;verticalAlignment&quot;: &quot;vertical-alignment--middle&quot;,
+&quot;contentWidth&quot;: &quot;content-width--wide&quot;,
+&quot;customContentWidth&quot;: 50,
+&quot;sectionTheme&quot;: &quot;&quot;,
+&quot;sectionAnimation&quot;: &quot;none&quot;,
+&quot;backgroundMode&quot;: &quot;image&quot;
+}" data-current-context="{
+&quot;video&quot;: {
+&quot;playbackSpeed&quot;: 0.5,
+&quot;filter&quot;: 1,
+&quot;filterStrength&quot;: 0,
+&quot;zoom&quot;: 0,
+&quot;videoSourceProvider&quot;: &quot;none&quot;
+},
+&quot;backgroundImageId&quot;: null,
+&quot;backgroundMediaEffect&quot;: null,
+&quot;typeName&quot;: &quot;page&quot;
+}" data-animation="none" id="yui_3_17_2_1_1661331426219_75" data-controllers-bound="SectionWrapperController" data-active="true">
+        <div class="section-background">
+
+
+
+        </div>
+        <div class="content-wrapper" style="
+      
+        
+      
+    " id="yui_3_17_2_1_1661331426219_74">
+            <div class="content" id="yui_3_17_2_1_1661331426219_73">
+
+
+
+
+                <div class="sqs-layout sqs-grid-12 columns-12" data-type="page-section" id="page-section-606d8ec034dc8f1143391c63">
+                    <div class="row sqs-row" id="yui_3_17_2_1_1661331426219_72">
+                        <div class="col sqs-col-6 span-6" id="yui_3_17_2_1_1661331426219_71">
+                            <div class="sqs-block image-block sqs-block-image sqs-text-ready" data-block-type="5" id="block-yui_3_17_2_1_1631698552730_2519">
+                                <div class="sqs-block-content preSlide slideIn" id="yui_3_17_2_1_1661331426219_70" style="transition-timing-function: ease; transition-duration: 0.45s; transition-delay: 0.184615s;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    <div class="image-block-outer-wrapper layout-caption-hidden design-layout-inline combination-animation-site-default individual-animation-site-default individual-text-animation-site-default animation-loaded" data-test="image-block-inline-outer-wrapper"
+                                        id="yui_3_17_2_1_1661331426219_69">
+
+
+
+
+                                        <figure class="
+              sqs-block-image-figure
+              intrinsic
+            " style="max-width:342px;" id="yui_3_17_2_1_1661331426219_68">
+
+
+
+
+
+
+
+                                            <div class="image-block-wrapper preSlide slideIn" data-animation-role="image" id="yui_3_17_2_1_1661331426219_67" style="transition-timing-function: ease; transition-duration: 0.45s; transition-delay: 0.207692s;">
+                                                <div class="sqs-image-shape-container-element
+              
+          
+        
+              has-aspect-ratio
+            " style="
+                position: relative;
+                
+                  padding-bottom:22.807016372680664%;
+                
+                overflow: hidden;
+              " id="yui_3_17_2_1_1661331426219_66">
+                                                    <noscript><img src="https://images.squarespace-cdn.com/content/v1/606c528d66ce4d294f5592a8/1493511e-6ee2-499c-a5f1-fa8daf3f363a/footer-logo.png" alt="" /></noscript><img class="thumb-image loaded" data-src="https://images.squarespace-cdn.com/content/v1/606c528d66ce4d294f5592a8/1493511e-6ee2-499c-a5f1-fa8daf3f363a/footer-logo.png"
+                                                        data-image="https://images.squarespace-cdn.com/content/v1/606c528d66ce4d294f5592a8/1493511e-6ee2-499c-a5f1-fa8daf3f363a/footer-logo.png" data-image-dimensions="342x78" data-image-focal-point="0.5,0.5"
+                                                        alt="" data-load="false" data-image-id="62c2df304a79686cac4a068e" data-type="image" style="left: 0%; top: 0%; width: 100%; height: 100%; position: absolute;" data-image-resolution="500w" src="https://images.squarespace-cdn.com/content/v1/606c528d66ce4d294f5592a8/1493511e-6ee2-499c-a5f1-fa8daf3f363a/footer-logo.png?format=500w">
+                                                </div>
+                                            </div>
+
+
+
+
+
+
+                                        </figure>
+
+
+                                    </div>
+
+
+
+
+
+
+                                </div>
+                            </div>
+                            <div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_1_1656937575524_7068">
+                                <div class="sqs-block-content preSlide slideIn" style="transition-timing-function: ease; transition-duration: 0.45s; transition-delay: 0.230769s;">
+                                    <p class="preFade fadeIn" style="white-space: pre-wrap; transition-timing-function: ease; transition-duration: 0.45s; transition-delay: 0.253846s;">Landesprogramm Wirstchaft: Gefordert durch die Europäische Union. Europäische Fonds Für regionale Entwicklung (EFRE). den Bund und das Land Schleswig-Holstein</p>
+
+
+                                </div>
+                            </div>
+                            <div class="sqs-block image-block sqs-block-image sqs-text-ready" data-block-type="5" id="block-yui_3_17_2_1_1640084562493_4402">
+                                <div class="sqs-block-content preSlide slideIn" id="yui_3_17_2_1_1661331426219_95" style="transition-timing-function: ease; transition-duration: 0.45s; transition-delay: 0.276923s;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    <div class="image-block-outer-wrapper layout-caption-hidden design-layout-inline combination-animation-site-default individual-animation-site-default individual-text-animation-site-default animation-loaded" data-test="image-block-inline-outer-wrapper"
+                                        id="yui_3_17_2_1_1661331426219_94">
+
+
+
+
+                                        <figure class="
+              sqs-block-image-figure
+              intrinsic
+            " style="max-width:378px;" id="yui_3_17_2_1_1661331426219_93">
+
+
+
+
+
+                                            <a class="
+                sqs-block-image-link
+                
+          
+        
+              " href="https://4evergreenforum.eu" id="yui_3_17_2_1_1661331426219_92">
+
+                                                <div class="image-block-wrapper preSlide slideIn" data-animation-role="image" id="yui_3_17_2_1_1661331426219_91" style="transition-timing-function: ease; transition-duration: 0.45s; transition-delay: 0.3s;">
+                                                    <div class="sqs-image-shape-container-element
+              
+          
+        
+              has-aspect-ratio
+            " style="
+                position: relative;
+                
+                  padding-bottom:27.77777862548828%;
+                
+                overflow: hidden;
+              " id="yui_3_17_2_1_1661331426219_90">
+                                                        <noscript><img src="https://images.squarespace-cdn.com/content/v1/606c528d66ce4d294f5592a8/dce4d842-bb2c-478b-a377-00b333b99e6f/4EG_logo_tagline_white.png" alt="" /></noscript><img class="thumb-image loaded"
+                                                            data-src="https://images.squarespace-cdn.com/content/v1/606c528d66ce4d294f5592a8/dce4d842-bb2c-478b-a377-00b333b99e6f/4EG_logo_tagline_white.png" data-image="https://images.squarespace-cdn.com/content/v1/606c528d66ce4d294f5592a8/dce4d842-bb2c-478b-a377-00b333b99e6f/4EG_logo_tagline_white.png"
+                                                            data-image-dimensions="378x105" data-image-focal-point="0.5,0.5" alt="" data-load="false" data-image-id="62c2dc36a2541834b5108bd8" data-type="image" style="left: 0%; top: 0%; width: 100%; height: 100%; position: absolute;"
+                                                            data-image-resolution="500w" src="https://images.squarespace-cdn.com/content/v1/606c528d66ce4d294f5592a8/dce4d842-bb2c-478b-a377-00b333b99e6f/4EG_logo_tagline_white.png?format=500w">
+                                                    </div>
+                                                </div>
+
+                                            </a>
+
+
+
+
+                                        </figure>
+
+
+                                    </div>
+
+
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col sqs-col-6 span-6">
+                            <div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_1_1656936984515_26272">
+                                <div class="sqs-block-content preSlide slideIn" style="transition-timing-function: ease; transition-duration: 0.45s; transition-delay: 0.323077s;">
+                                    <h4 style="white-space: pre-wrap; transition-timing-function: ease; transition-duration: 0.45s; transition-delay: 0.346154s;" class="preFade fadeIn">INFORMATION</h4>
+                                    <ul data-rte-list="default">
+                                        <li>
+                                            <p class="preFade fadeIn" style="white-space: pre-wrap; transition-timing-function: ease; transition-duration: 0.45s; transition-delay: 0.369231s;"><a href="#">Privacy Statement </a></p>
+                                        </li>
+                                        <li>
+                                            <p class="preFade fadeIn" style="white-space: pre-wrap; transition-timing-function: ease; transition-duration: 0.45s; transition-delay: 0.392308s;"><a href="#">Cookies policy </a></p>
+                                        </li>
+                                        <li>
+                                            <p class="preFade fadeIn" style="white-space: pre-wrap; transition-timing-function: ease; transition-duration: 0.45s; transition-delay: 0.415385s;"><a href="#">Terms of agreement to use the website</a></p>
+                                        </li>
+                                        <li>
+                                            <p class="preFade fadeIn" style="white-space: pre-wrap; transition-timing-function: ease; transition-duration: 0.45s; transition-delay: 0.438462s;"><a href="#">Legal or term</a></p>
+                                        </li>
+                                    </ul>
+                                    <h4 style="white-space: pre-wrap; transition-timing-function: ease; transition-duration: 0.45s; transition-delay: 0.461538s;" class="preFade fadeIn">CONTACT US</h4>
+
+
+                                </div>
+                            </div>
+                            <div class="sqs-block code-block sqs-block-code" data-block-type="23" id="block-yui_3_17_2_1_1649759434968_90698">
+                                <div class="sqs-block-content preSlide slideIn" style="transition-timing-function: ease; transition-duration: 0.45s; transition-delay: 0.484615s;"><span class="cls-conact"><img src="https://static1.squarespace.com/static/606c528d66ce4d294f5592a8/t/6257b8efd994ce47ce4ca552/1649916143706/map.png">one.five GmbH, Reichskanzlerstr. 23 a D–22609 Hamburg</span></div>
+                            </div>
+                            <div class="sqs-block code-block sqs-block-code" data-block-type="23" id="block-yui_3_17_2_1_1649759434968_93853">
+                                <div class="sqs-block-content preSlide slideIn" style="transition-timing-function: ease; transition-duration: 0.45s; transition-delay: 0.507692s;"><span class="cls-email cls-conact"><a href="mailto:info@one-five.com"><img src="https://static1.squarespace.com/static/606c528d66ce4d294f5592a8/t/6257b950e216dd40834832c6/1649916240489/email.png">info@one-five.com</a></span></div>
+                            </div>
+                            <div class="sqs-block code-block sqs-block-code" data-block-type="23" id="block-yui_3_17_2_1_1649759434968_84912">
+                                <div class="sqs-block-content preSlide slideIn" style="transition-timing-function: ease; transition-duration: 0.45s; transition-delay: 0.530769s;">
+                                    <div class="icon-outer">
+                                        <span class="cls-linked"><a target="_blank" href="https://www.linkedin.com/company/one-five-com/"> <img src="https://static1.squarespace.com/static/606c528d66ce4d294f5592a8/t/6257b861eb7f843948d7668c/1649916001559/linkedin.png">LinkedIn</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
